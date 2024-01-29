@@ -3,6 +3,9 @@ const express = require("express");
 const app = express();
 const port = process.env.PORT;
 const connectDB = require("./db/connectDB");
+const imageRoute = require("./routes/imageRoute");
+
+app.use("/", imageRoute);
 
 const start = async () => {
   try {
